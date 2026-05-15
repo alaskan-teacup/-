@@ -6,12 +6,30 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 map.on('click', function(e) {
 
+  #位置情報の取得
   alert(
     "lat: " + e.latlng.lat +
     "\nlng: " + e.latlng.lng
   );
 
 });
+
+map.on('click', function(e) {
+
+  console.log(e.latlng.lat, e.latlng.lng);
+
+});
+
+map.on('click', function(e) {
+
+  const marker = L.marker([
+    e.latlng.lat,
+    e.latlng.lng
+  ]).addTo(map);
+
+});
+
+#個々のマーカー
 
 const marker = L.marker([35.0116, 135.7681]).addTo(map);
 
