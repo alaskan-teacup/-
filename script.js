@@ -4,10 +4,14 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-const marker = L.marker([35.0116, 135.7681]).addTo(map);
 
-marker.bindPopup("京都の中心エリア");
+// 京都駅マーカー
+const marker = L.marker([34.9855, 135.7586]).addTo(map);
 
+marker.bindPopup("京都駅");
+
+
+// 地図クリックで座標表示
 map.on('click', function(e) {
 
   alert(
