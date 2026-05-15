@@ -9,14 +9,3 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const marker = L.marker([34.9855, 135.7586]).addTo(map);
 
 marker.bindPopup("京都駅");
-
-
-// 地図クリックで座標表示
-map.on('click', function(e) {
-
-  alert(
-    "lat: " + e.latlng.lat +
-    "\nlng: " + e.latlng.lng
-  );
-
-});
